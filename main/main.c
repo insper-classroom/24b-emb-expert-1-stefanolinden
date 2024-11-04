@@ -10,8 +10,7 @@
  
 #define AUDIO_PIN 28  
 
-
-#define PIN_ADC 26;
+#define PIN_ADC 26
 #define ADC_VREF 3.3
 #define ADC_RANGE (1 << 12)
 #define ADC_CONVERT (ADC_VREF / (ADC_RANGE - 1))
