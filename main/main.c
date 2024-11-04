@@ -10,8 +10,8 @@
  
 #define AUDIO_PIN 28  
 
-#define ADC_NUM 0
-#define PIN_ADC (26 + ADC_NUM)
+
+#define PIN_ADC 26;
 #define ADC_VREF 3.3
 #define ADC_RANGE (1 << 12)
 #define ADC_CONVERT (ADC_VREF / (ADC_RANGE - 1))
@@ -42,7 +42,7 @@ int main(void) {
     gpio_pull_up(BTN_PIN);
     adc_init();
     adc_gpio_init(PIN_ADC);
-    adc_select_input(ADC_NUM);
+    adc_select_input(0);
     while(1) {
         if (!gpio_get(BTN_PIN)) {
         valor_adc = adc_read();
